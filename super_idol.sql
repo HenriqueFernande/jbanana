@@ -1,3 +1,4 @@
+-- TABLE
 CREATE TABLE cliente(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   nome TEXT,
@@ -8,10 +9,6 @@ CREATE TABLE cliente(
   numero_telefone VARCHAR(20),
   genero TEXT
   );
-
------------------------------------------------------------------------------------------------------
-
-
 CREATE TABLE entrega(
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	cod_rasterio TEXT, 
@@ -32,11 +29,6 @@ CREATE TABLE entrega(
     FOREIGN KEY(endereco_cliente) REFERENCES cliente(endereco),
   	FOREIGN KEY(numero_telefone) REFERENCES cliente(numero_telefone)
 );
-
-
------------------------------------------------------------------------------------------------------
-
-
 CREATE TABLE fornecedor(
     id INTEGER PRIMARY KEY AUTOINCREMENT,
 	cnpj TEXT UNIQUE,
@@ -46,11 +38,6 @@ CREATE TABLE fornecedor(
   	numero_telefone INTEGER,
   	endereco_empresa TEXT
   );
-
-
------------------------------------------------------------------------------------------------------
-
-
 CREATE TABLE produto(
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   nome_produto TEXT,
@@ -61,3 +48,10 @@ CREATE TABLE produto(
   categoria	TEXT,
   fabricante TEXT
  );
+ 
+-- INDEX
+ 
+-- TRIGGER
+ 
+-- VIEW
+ 
